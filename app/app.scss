@@ -1,6 +1,6 @@
-$header-height: 50px;
+$header-height: 35px;
 $default-padding: 20px;
-$color-primary: #17212d;
+$color-primary: #0078e7;
 $border-color: #e6e6e6;
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -49,7 +49,8 @@ body {
   width: 100%;
   height: $header-height;
   background: $color-primary;
-  padding: 15px;
+  border-bottom: 1px solid darken($color-primary, 6%);
+  padding: 7px 8px;
   box-sizing: border-box;
   color: #fff;
 
@@ -70,7 +71,7 @@ input[type=button], input[type=submit], button, a.btn {
   padding: 5px 10px;
   font-family: 'Open Sans', serif;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 2px;
   margin: 10px 0;
   background-color: $color-primary;
   color: #fff;
@@ -79,6 +80,7 @@ input[type=button], input[type=submit], button, a.btn {
 
   &:hover {
 	cursor: pointer;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
   }
 
   &:active, &:focus {
@@ -92,6 +94,10 @@ input[type=button], input[type=submit], button, a.btn {
   max-width: 250px;
   min-width: 150px;
   overflow-y: scroll;
+
+  .project-details {
+	padding: 5px;
+  }
 
   .request {
 	white-space: nowrap;
@@ -109,6 +115,7 @@ input[type=button], input[type=submit], button, a.btn {
   .method {
 	border-radius: 1px;
 	padding: 3px;
+	margin-right: 5px;
 	font-size: 0.7em;
 	background: lightgray;
 
